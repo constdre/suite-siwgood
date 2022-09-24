@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
-import App from "./components/App";
+import App from "./app/App";
 
 window.onload = () => {
     const container = document.getElementById("react-root")

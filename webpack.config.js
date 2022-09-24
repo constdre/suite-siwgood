@@ -28,10 +28,10 @@ function modeConfig(env) {
                 ],
             },
             devtool: 'source-map',
-            plugins:[
+            plugins: [
                 new HtmlWebpackPlugin({
-                    title:'React Development',
-                    template:'./src/index.html'
+                    title: 'React Development',
+                    template: './src/index.html'
                 })
             ]
         },
@@ -94,9 +94,11 @@ function defaultConfig(env) {
                 }
             ]
         },
-        // resolve: {
-        //     alias: aliasRegistry(__dirname)
-        // },
+        resolve: {
+            alias: {
+                SharedComponents: path.resolve(__dirname, 'src/common/components')
+            }
+        },
         plugins: [
             // Needed to ignore when using moment.js
             new webpack.IgnorePlugin({

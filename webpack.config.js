@@ -96,7 +96,7 @@ function defaultConfig(env) {
         },
         resolve: {
             alias: {
-                SharedComponents: path.resolve(__dirname, 'src/common/components')
+                'suite-siwg': path.resolve(__dirname, 'src/siwgood-components')
             }
         },
         plugins: [

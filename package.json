@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "They utilized the suite, and they saw thtat it was good",
   "scripts": {
-    "dev": "webpack-dev-server --env mode=development --open",
+    "dev": "webpack-dev-server --env mode=development",
     "build": "webpack --env mode=production"
   },
   "author": "Lourd Andre B. Ammuyutan",

@@ -28,10 +28,10 @@ function modeConfig(env) {
                 ],
             },
             devtool: 'source-map',
-            plugins:[
+            plugins: [
                 new HtmlWebpackPlugin({
-                    title:'React Development',
-                    template:'./src/index.html'
+                    title: 'React Development',
+                    template: './src/index.html'
                 })
             ]
         },
@@ -62,7 +62,7 @@ function defaultConfig(env) {
     return {
         mode: env.mode,
         entry: {
-            app: './src/index.js'
+            app: './src/index.tsx'
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -75,6 +75,13 @@ function defaultConfig(env) {
                     exclude: /node_modules/,
                     use: {
                         loader: 'babel-loader'
+                    }
+                },
+                {
+                    test: /\.tsx?$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'ts-loader'
                     }
                 },
                 // css-loader: returns css file as a string
@@ -94,9 +101,9 @@ function defaultConfig(env) {
                 }
             ]
         },
-        // resolve: {
-        //     alias: aliasRegistry(__dirname)
-        // },
+        resolve: {
+            extensions: ['.tsx', '.ts', '.js']
+        },
         plugins: [
             // Needed to ignore when using moment.js
             new webpack.IgnorePlugin({

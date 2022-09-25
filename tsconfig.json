@@ -1,12 +1,16 @@
 {
     "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": true,
-      "module": "es6",
-      "target": "es5",
-      "jsx": "react",
       "allowJs": true,
+      "baseUrl":"./",
       "allowSyntheticDefaultImports": true,
-      "moduleResolution": "Node"
+      "jsx": "react",
+      "module": "es6",
+      "moduleResolution": "Node",
+      "noImplicitAny": true,
+      "outDir": "./dist/",
+      "paths": {
+        "suite-siwg/*":["src/siwgood-components/*"]
+      },
+      "target": "es5"
     }
 }

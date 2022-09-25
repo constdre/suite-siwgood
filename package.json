@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "They utilized the suite, and they saw thtat it was good",
   "scripts": {
-    "dev": "webpack-dev-server --env mode=development --open",
+    "dev": "webpack-dev-server --env mode=development",
     "build": "webpack --env mode=production"
   },
   "author": "Lourd Andre B. Ammuyutan",
@@ -11,12 +11,16 @@
   "devDependencies": {
     "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.3",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",

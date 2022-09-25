@@ -103,7 +103,7 @@ function defaultConfig(env) {
         },
         resolve: {
             alias: {
-                'suite-siwg': path.resolve(__dirname, 'src/siwgood-components')
+                'suite-siwg': path.resolve(__dirname, 'src/swgd-components')
             },
             extensions: ['.tsx', '.ts', '.js']
         },

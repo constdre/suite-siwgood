@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { FaBars } from 'react-icons/fa'
 import { NavDrawerProps } from '.'
+import getTypeSafeProps from './getTypeSafeProps'
 
 const NavDrawer = ({
     body,
@@ -32,6 +33,7 @@ const NavDrawer = ({
     placement = 'left'
 }: NavDrawerProps) => {
 
+    const ts = getTypeSafeProps({placement})
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
@@ -46,7 +48,7 @@ const NavDrawer = ({
             <Drawer
                 isOpen={isOpen}
                 onClose={onClose}
-                placement={placement}
+                placement={ts.placement}
             >
                 <DrawerOverlay />
                 <DrawerContent>

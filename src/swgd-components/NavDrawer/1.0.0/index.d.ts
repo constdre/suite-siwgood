@@ -1,13 +1,13 @@
-import { DrawerProps } from '@chakra-ui/react'
 import { ReactElement, ReactNode } from 'react'
 
-export interface NavDrawerProps extends Pick<DrawerProps, 'placement'> {
+export interface NavDrawerProps {
     body?: ReactNode,
     customIcon?: ReactElement
     iconStyles?: {},
     footer?: ReactNode,
     header?: ReactNode,
-    headerStyles?: {}
+    headerStyles?: {},
+    placement?: string
 }
 
 declare function NavDrawer(props: NavDrawerProps): JSX.Element;

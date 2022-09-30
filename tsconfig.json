@@ -9,7 +9,7 @@
       "noImplicitAny": true,
       "outDir": "./dist/",
       "paths": {
-        "suite-siwg/*":["src/swgd-components/*"]
+        "suite-swgd/*":["src/swgd-components/*"]
       },
       "sourceMap": true,
       "target": "es5"

@@ -16,8 +16,19 @@ import { NavDrawerProps } from '.'
 const NavDrawer = ({
     body,
     customIcon,
+    iconStyles = {
+        fontSize: ['1.5rem'],
+        height: ['3rem'],
+        width: ['4rem']
+    },
     footer,
     header,
+    headerStyles = {
+        fontSize: {
+            base: '1.8rem',
+            md: '2rem',
+        }
+    },
     placement = 'left'
 }: NavDrawerProps) => {
 
@@ -29,6 +40,7 @@ const NavDrawer = ({
                 aria-label='Show menu'
                 icon={customIcon ? customIcon : <FaBars />}
                 onClick={onOpen}
+                sx={{ ...iconStyles }}
                 variant='ghost'
             ></IconButton>
             <Drawer
@@ -39,7 +51,7 @@ const NavDrawer = ({
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader>{header}</DrawerHeader>
+                    <DrawerHeader sx={{ ...headerStyles }}>{header}</DrawerHeader>
                     <DrawerBody>{body}</DrawerBody>
                     <DrawerFooter>{footer}</DrawerFooter>
                 </DrawerContent>

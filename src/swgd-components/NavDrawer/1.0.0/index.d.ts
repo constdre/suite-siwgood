@@ -4,11 +4,10 @@ import { ReactElement, ReactNode } from 'react'
 export interface NavDrawerProps extends Pick<DrawerProps, 'placement'> {
     body?: ReactNode,
     customIcon?: ReactElement
-    overrideIconStyles?: {},
+    iconStyles?: {},
     footer?: ReactNode,
     header?: ReactNode,
-    headerText?: string,
-    headerTextStyles?: {}
+    headerStyles?: {}
 }
 
 declare function NavDrawer(props: NavDrawerProps): JSX.Element;

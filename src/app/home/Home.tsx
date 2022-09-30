@@ -1,15 +1,29 @@
-import { Flex, Heading } from '@chakra-ui/react';
+import { Center, Flex, Grid, GridItem, Heading, Spacer } from '@chakra-ui/react';
 import React from 'react';
-import { NavDrawer } from 'suite-siwg/NavDrawer';
+import { NavDrawer } from 'suite-swgd/NavDrawer';
 
 const Home = () => {
     return (
-        <Flex justifyContent={'space-between'}>
-            <NavDrawer
-                header='Component'
-            />
-            <Heading m={'0 auto'}>Suite SWGD</Heading>
-        </Flex>
+        <>
+            <Grid
+                templateAreas={`"menu-icon app-title"`}
+                gridTemplateColumns='20% 60%'
+                alignItems='center'
+            >
+                <GridItem area='menu-icon'>
+                    <Flex>
+                        <NavDrawer
+                            header='Components'
+                        />
+                    </Flex>
+                </GridItem>
+                <GridItem area='app-title'>
+                    <Center>
+                        <Heading>Suite SWGD</Heading>
+                    </Center>
+                </GridItem>
+            </Grid>
+        </>
     )
 }
 

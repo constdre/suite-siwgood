@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React from 'react'
 import {
     Drawer,
     DrawerBody,
@@ -8,39 +8,28 @@ import {
     DrawerContent,
     DrawerCloseButton,
     IconButton,
-    useDisclosure,
-    DrawerProps,
+    useDisclosure
 } from '@chakra-ui/react'
 import { FaBars } from 'react-icons/fa'
+import { NavDrawerProps } from '.'
+
 const NavDrawer = ({
     body,
     customIcon,
-    defaultIconProps,
     footer,
     header,
-    placement = 'left',
-}: Pick<DrawerProps, 'placement'> & {
-    body?: ReactNode,
-    customIcon?: ReactElement
-    footer?: ReactNode,
-    header?: ReactNode,
-    defaultIconProps?: {
-        fontSize?: string | number,
-        height?: string | number,
-        width?: string | number
-    }
-}) => {
+    placement = 'left'
+}: NavDrawerProps) => {
+
     const { isOpen, onOpen, onClose } = useDisclosure()
+
     return (
         <>
             <IconButton
                 aria-label='Show menu'
-                fontSize={defaultIconProps?.fontSize}
                 icon={customIcon ? customIcon : <FaBars />}
                 onClick={onOpen}
                 variant='ghost'
-                width={defaultIconProps?.width}
-                height={defaultIconProps?.height}
             ></IconButton>
             <Drawer
                 isOpen={isOpen}
@@ -58,5 +47,4 @@ const NavDrawer = ({
         </>
     )
 }
-
 export default NavDrawer;

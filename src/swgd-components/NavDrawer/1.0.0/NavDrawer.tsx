@@ -20,7 +20,7 @@ const NavDrawer = ({
     iconStyles = {
         fontSize: {
             base: '1.5rem',
-            '2xl': '2rem'
+            '2xl': '1.7rem'
         }
     },
     footer,
@@ -28,7 +28,7 @@ const NavDrawer = ({
     headerStyles = {
         fontSize: {
             base: '1.5rem',
-            '2xl': '2rem'
+            '2xl': '1.7rem'
         }
     },
     placement = 'left'

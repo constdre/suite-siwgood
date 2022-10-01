@@ -4,13 +4,6 @@ const theme = {
     config: {
         initialColorMode: 'light',
         useSystemColorMode: true,
-    },
-    styles: {
-        global: {
-            '#app-root': {
-                p: 4
-            }
-        }
     }
 }
 

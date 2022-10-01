@@ -7,7 +7,10 @@ const ColorModeToggle = ({
     colorMode,
     toggleColorMode,
     style = {
-        fontSize: 'xl'
+        fontSize: {
+            base: '1.5rem',
+            '2xl': '2rem'
+        }
     }
 }: ColorModeToggleProps) => {
 

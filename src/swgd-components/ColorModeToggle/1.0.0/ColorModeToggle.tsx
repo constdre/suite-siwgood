@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react'
+import { Button, IconButton } from '@chakra-ui/react'
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs'
 import React from 'react'
 import { ColorModeToggleProps } from '.'
@@ -18,14 +18,13 @@ const ColorModeToggle = ({
         }
     }
     return (
-        <Button
+        <IconButton
             aria-label='Color Mode Toggle'
+            icon={colorMode == 'light' ? <BsFillMoonStarsFill /> : <BsSunFill />}
             onClick={toggleColorMode}
             sx={{ ...defaultStyle, ...style }}
             variant='ghost'
-        >
-            {colorMode == 'light' ? <BsFillMoonStarsFill /> : <BsSunFill />}
-        </Button>
+        />
     )
 
     type lightOrDarkPropType = string | number | React.CSSProperties

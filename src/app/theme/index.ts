@@ -1,10 +1,14 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = {
-    styles:{
-        global:{
-            '#app-root':{
-                p:4
+    config: {
+        initialColorMode: 'light',
+        useSystemColorMode: true,
+    },
+    styles: {
+        global: {
+            '#app-root': {
+                p: 4
             }
         }
     }

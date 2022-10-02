@@ -3,7 +3,7 @@ import React from 'react';
 import { ColorModeToggle } from 'suite-swgd/ColorModeToggle';
 import { NavDrawer } from 'suite-swgd/NavDrawer';
 
-const Home = () => {
+const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const isMobileDisplay = useBreakpointValue({ base: true, sm: false });
     return (
@@ -38,4 +38,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Header
